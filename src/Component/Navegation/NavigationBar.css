@@ -1,0 +1,36 @@
+.offcanvaimg {
+
+
+    background-color: #664803 !important;
+
+    color: #ffff;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.offcanvaimg img {
+    position: relative;
+    margin: 15px 10px 15px 20px;
+    left: 0px;
+    top: 0px
+}
+
+.offcanvaimg p {
+    padding: 20px 20px 0px 0px;
+
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+
+.my-nav-link {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block;
+
+    color: #ffff !important;
+}
