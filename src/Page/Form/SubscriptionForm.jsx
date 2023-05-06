@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { MdArrowForwardIos } from 'react-icons/md'
+import { useSelector } from 'react-redux'
 import styles from './style.module.css'
 
 const SubscriptionForm = () => {
+  const isArabic = useSelector(state => state.isArabic)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
@@ -13,14 +15,26 @@ const SubscriptionForm = () => {
     console.log(name, email, phone)
   }
 
+  const language = isArabic ? 'ar' : 'en'
+  const namePlaceholder = language === 'ar' ? 'ادخل اسمك' : 'Enter your name'
+  const emailPlaceholder =
+    language === 'ar' ? 'ادخل عنوان بريدك الإلكتروني' : 'Enter email address'
+  const phonePlaceholder =
+    language === 'ar' ? 'ادخل رقم هاتفك المحمول' : 'Enter mobile number'
+  const submitButtonLabel = language === 'ar' ? 'اشتراك' : 'SUBSCRIBE'
+
   return (
     <div className={styles.sectionSubscribe}>
       <div className={styles.subcontainer}>
         <div className={styles.subrow}>
           <div className={styles.subcol}>
-            <div className={styles.sectionTitle}>SUBSCRIBE</div>
+            <div className={styles.sectionTitle}>
+              {language === 'ar' ? 'اشترك' : 'SUBSCRIBE'}
+            </div>
             <p className={styles.textsub}>
-              Get offers and events information every month
+              {language === 'ar'
+                ? 'احصل على عروض ومعلومات الأحداث كل شهر'
+                : 'Get offers and events information every month'}
             </p>
             <div className={styles.mailSubscribe}>
               <form name='' className={styles.form}>
@@ -29,7 +43,7 @@ const SubscriptionForm = () => {
                     <input
                       className={styles.formControl}
                       name='name'
-                      placeholder='Enter your name'
+                      placeholder={namePlaceholder}
                       type='text'
                       value={name}
                       onChange={e => setName(e.target.value)}
@@ -41,7 +55,7 @@ const SubscriptionForm = () => {
                     <input
                       className={styles.formControl}
                       name='email'
-                      placeholder='Enter email address'
+                      placeholder={emailPlaceholder}
                       type='email'
                       value={email}
                       onChange={e => setEmail(e.target.value)}
@@ -51,7 +65,7 @@ const SubscriptionForm = () => {
                     <input
                       className={styles.formControl}
                       name='mobile'
-                      placeholder='Enter mobile number'
+                      placeholder={phonePlaceholder}
                       type='number'
                       value={phone}
                       onChange={e => setPhone(e.target.value)}
@@ -66,8 +80,7 @@ const SubscriptionForm = () => {
                     !name || !email || phone < 499999999 || phone > 599999999
                   }
                 >
-                  SUBSCRIBE
-                  <MdArrowForwardIos />
+                  {submitButtonLabel}
                 </button>
               </form>
             </div>

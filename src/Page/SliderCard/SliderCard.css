@@ -1,115 +1,66 @@
-.carousel-item {
-
+.custom-carousel .slide {
     height: 80vw;
     max-height: 500px;
-    margin: 0 auto;
-    max-width: 100vw;
     background-size: cover;
     overflow: hidden !important;
-
 }
 
-.carousel-caption h3,
-.carousel-caption p {
+.custom-carousel .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
     color: #fff;
-
+    text-align: center;
     padding: 10px;
     font-size: 2rem;
-
 }
 
-
-.carousel-item {
-    height: 400px;
-}
-
-
-.carousel-caption h3,
-.carousel-caption p {
-    color: #fff;
-    margin: 0;
-}
-
-
-.carousel-control-prev-icon {
-    margin-left: -20px;
-}
-
-.carousel-control-next-icon {
-    margin-right: -20px;
-}
-
-.title {
-    position: relative;
-    bottom: 295px;
+.custom-carousel .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #413e3e;
-
     font-size: 24px;
     color: #fff;
-    z-index: 100px;
+    padding: 10px;
 }
 
-.description {
-    position: relative;
-
+.custom-carousel .description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     font-size: 16px;
     color: #fff;
     text-align: center;
-    width: 100%;
-    padding: 20px;
+    padding: 10px;
     background-color: #413e3e;
-    bottom: 208px;
-
 }
 
-.carousel .slide .legend {
-
-
-    position: relative;
-    bottom: 83px;
-    left: 45%;
+.custom-carousel .legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     background-color: transparent;
-    border-radius: 10px;
     color: #fff;
     padding: 10px;
     font-size: 12px;
     text-align: center;
     opacity: 0.9;
-    -webkit-transition: opacity .35s ease-in-out;
-    -moz-transition: opacity .35s ease-in-out;
-    -ms-transition: opacity .35s ease-in-out;
-    -o-transition: opacity .35s ease-in-out;
-    transition: opacity .35s ease-in-out;
     border-bottom: 4px solid #5677c2;
-
 }
 
-.carousel.carousel-slider .control-arrow {
+.custom-carousel .control-arrow {
     height: 100% !important;
-
 }
 
-.control-dots {
+.custom-carousel .control-dots {
     display: none;
-
 }
 
-.carousel .carousel-slider {}
-
-.slide .selected {
+.custom-carousel .slider-wrapper {
     overflow: hidden;
-
-}
-
-
-.carousel .slider-wrapper {
-    overflow: hidden;
-    /* margin: auto; */
-    width: 84%;
-    -webkit-transition: height .15s ease-in;
-    -moz-transition: height .15s ease-in;
-    -ms-transition: height .15s ease-in;
-    -o-transition: height .15s ease-in;
-    transition: height .15s ease-in;
 }

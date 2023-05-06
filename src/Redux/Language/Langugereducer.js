@@ -1,7 +1,7 @@
 import { SET_LANGUAGE } from './actionTypes';
 
 const initialState = {
-    isArabic: false,
+    isArabic: 'ar',
 };
 
 const reducer = (state = initialState, action) => {

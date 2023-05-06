@@ -1,64 +1,75 @@
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { FaComments } from 'react-icons/fa'
 import { BiAddToQueue } from 'react-icons/bi'
 import './style.css'
 
 const Opinion = () => {
+  const isArabic = useSelector(state => state.isArabic)
+
+  const [opinion, setOpinion] = useState('')
+  const [showOpinionField, setShowOpinionField] = useState(false)
+
+  const handleOpinionChange = event => {
+    setOpinion(event.target.value)
+  }
+
+  const handleAddOpinion = () => {
+    setShowOpinionField(true)
+  }
+
+  const handleSubmitOpinion = () => {
+    const emailLink = `mailto:adhamalomari909@gmail.com?subject=Opinion&body=${encodeURIComponent(
+      opinion
+    )}`
+    window.location.href = emailLink
+  }
+
   return (
     <div>
-      <div class='section-home home-news ng-scope'>
-        <div class='heading-section'>
-          <div class='sa-title popcat ng-binding '>
-            Your opinion matters
+      <div className='section-home home-news ng-scope'>
+        <div className='heading-section'>
+          <div className='sa-title popcat ng-binding '>
+            {isArabic ? 'رأيك يهمنا' : 'Your opinion matters'}
             <FaComments className='mx-2' />
           </div>
-          <div class='add-feedback'>
-            <button class='btn' ui-sref='survey' href='#/survey'>
-              <BiAddToQueue />
+          <div className='add-feedback'>
+            <button className='btn' onClick={handleAddOpinion}>
+              {isArabic ? 'أضف رأيك' : 'Add Your Opinion'}
+              <BiAddToQueue className='mx-1' />
             </button>
           </div>
-
-          <div class='clear'></div>
+          <div className='clear'></div>
         </div>
-        <div class='home-news-wrap'></div>
+        <div className='home-news-wrap'>
+          {showOpinionField && (
+            <div className='opinion-card'>
+              <div className='opinion-card-header'>
+                <h2 className='opinion-card-title'>
+                  {isArabic ? 'أضف رأيك' : 'Add Your Opinion'}
+                </h2>
+              </div>
+              <div className='opinion-card-body'>
+                <textarea
+                  className='opinion-textarea'
+                  placeholder={
+                    isArabic ? 'أدخل رأيك هنا...' : 'Enter your opinion here...'
+                  }
+                  value={opinion}
+                  onChange={handleOpinionChange}
+                ></textarea>
+                <button
+                  className='opinion-card-submit'
+                  onClick={handleSubmitOpinion}
+                >
+                  {isArabic ? 'إرسال الرأي' : 'Submit Opinion'}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
-
-    // <div class='opinion-card'>
-    //   <div class='opinion-card-header'>
-    //     <h2 class='opinion-card-title'>Add Your Opinion</h2>
-
-    //   </div>
-    //   <div class='opinion-card-body'>
-    //     <form>
-    //       <div class='form-group'>
-    //         <label for='opinion-title' class='form-label'>
-    //           Title
-    //         </label>
-    //         <input
-    //           type='text'
-    //           id='opinion-title'
-    //           name='opinion-title'
-    //           class='form-input'
-    //           required
-    //         />
-    //       </div>
-    //       <div class='form-group'>
-    //         <label for='opinion-text' class='form-label'>
-    //           Opinion
-    //         </label>
-    //         <textarea
-    //           id='opinion-text'
-    //           name='opinion-text'
-    //           class='form-textarea'
-    //           required
-    //         ></textarea>
-    //       </div>
-    //       <button type='submit' class='opinion-card-submit'>
-    //         Submit Opinion
-    //       </button>
-    //     </form>
-    //   </div>
-    // </div>
   )
 }
 

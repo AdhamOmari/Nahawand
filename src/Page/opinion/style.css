@@ -1,34 +1,36 @@
-body .section-home {
-    border-bottom: 4px solid #5677c2;
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
 
-.section-home {
-    overflow-x: auto;
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
 }
+
+/* Section Home */
 
 .section-home {
     overflow: hidden;
     background-color: #ffffff;
-    width: 95%;
-    margin: 0 auto 15px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
-    padding: 15px;
-    -webkit-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
-    -moz-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
     box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+    margin-bottom: 15px;
+}
+
+.section-home.home-news {
+    border-bottom: 4px solid #5677c2;
 }
 
 .section-home .heading-section {
     position: relative;
     margin-bottom: 25px;
-    margin-top: 0px;
-}
-
-.section-home .heading-section .sa-title.popcat {
-    width: 100%;
-    line-height: 1;
+    margin-top: 0;
     text-align: center;
 }
 
@@ -39,15 +41,90 @@ body .section-home {
     font-weight: 600;
 }
 
-body .btn {
-    background-color: #1632a2;
-    color: white;
+/* Add Feedback Button */
+
+.add-feedback {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-button:not(:disabled) {
+.add-feedback .btn {
+    background-color: #1632a2;
+    color: white;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
+/* Opinion Card */
+
+.opinion-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.opinion-card-header {
+    margin-bottom: 15px;
+}
+
+.opinion-card-title {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    color: #212529;
+}
+
+.opinion-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.opinion-textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.opinion-card-submit {
+    background-color: #1632a2;
+    color: white;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* Clearfix */
+
 .clear {
     clear: both;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .section-home {
+        margin-bottom: 20px;
+    }
+
+    .opinion-card {
+        margin-bottom: 20px;
+    }
+
+    .opinion-card-submit {
+        align-self: center;
+    }
 }
