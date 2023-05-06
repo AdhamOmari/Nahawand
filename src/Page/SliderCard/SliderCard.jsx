@@ -1,6 +1,5 @@
-// SliderCard.js
-import { Card, Button, Carousel } from 'react-bootstrap'
-import { BsChevronRight, BsChevronLeft } from 'react-icons/bs'
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './SliderCard.css'
 
 const SliderCard = () => {
@@ -26,22 +25,15 @@ const SliderCard = () => {
   ]
 
   return (
-    <Carousel
-      prevIcon={<BsChevronLeft />}
-      nextIcon={<BsChevronRight />}
-      interval={2000}
-    >
+    <Carousel showThumbs={false} showStatus={false} autoPlay infiniteLoop>
       {images.map(image => (
-        <Carousel.Item key={image.id}>
-          <Card>
-            <img className='d-block w-100' src={image.src} alt='' />
-            <Carousel.Caption>
-              <h3>{image.title}</h3>
-              <p>{image.description}</p>
-              <Button variant='primary'>More</Button>
-            </Carousel.Caption>
-          </Card>
-        </Carousel.Item>
+        <div key={image.id}>
+          <img src={image.src} alt='' />
+          <div className='legend'>
+            <div className='title'>{image.title}</div>
+            <div className='description'>{image.description}</div>
+          </div>
+        </div>
       ))}
     </Carousel>
   )

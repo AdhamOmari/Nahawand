@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+.main_wrap {
+    width: 70%;
+    margin: 53px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    border-radius: 6px;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}

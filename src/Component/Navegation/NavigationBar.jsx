@@ -19,21 +19,27 @@ import {
   BsChatDotsFill
 } from 'react-icons/bs'
 import { RiGlobalLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
 function NavigationBar () {
   const [menuShow, setMenuShow] = useState(false)
   const [searchShow, setSearchShow] = useState(false)
+  const [isArabic, setIsArabic] = useState(false)
 
   const handleMenuClose = () => setMenuShow(false)
   const handleMenuShow = () => setMenuShow(true)
   const handleSearchClose = () => setSearchShow(false)
   const handleSearchShow = () => setSearchShow(true)
 
+  const handleLanguageChange = () => {
+    setIsArabic(!isArabic)
+  }
+
   return (
     <Navbar
-      style={{ backgroundColor: '#66480399' }}
+      style={{ backgroundColor: '#1632a2' }}
       expand='lg'
-      className='mb-3'
+      className='mb-3  navs'
     >
       <Container fluid>
         <Button variant='' onClick={handleMenuShow}>
@@ -41,7 +47,7 @@ function NavigationBar () {
         </Button>
 
         <Navbar.Brand
-          href='#'
+          href='/'
           style={{ color: '#ffffff', fontSize: '1rem', fontWeight: 'bold' }}
         >
           <img
@@ -52,6 +58,7 @@ function NavigationBar () {
             alt='Nahawand logo'
           />
         </Navbar.Brand>
+
         <Offcanvas
           show={menuShow}
           onHide={handleMenuClose}
@@ -72,7 +79,7 @@ function NavigationBar () {
             </Offcanvas.Title>
           </Offcanvas.Header>
 
-          <Offcanvas.Body style={{ backgroundColor: '#333' }}>
+          <Offcanvas.Body style={{ backgroundColor: '#495057' }}>
             <div className='offcanvaimg'>
               <img
                 src={Logo}
@@ -81,28 +88,42 @@ function NavigationBar () {
                 className='d-inline-block align rounded-circle'
                 alt='Nahawand logo'
               />
-              <p>Welcome</p>
+              <p>{isArabic ? 'مرحبا' : 'Welcome'} </p>
             </div>
-            <Nav className='my-nav flex-column'>
-              <Nav.Link href='#' className='my-nav-link'>
-                <BsHouseFill color='#ffce00' /> Home
+
+            <div className='nav_wrap'>
+              <Nav.Link as={Link} to='/' exact className='my-nav-link'>
+                <BsHouseFill color='#ffce00' /> {isArabic ? 'الرئيسية' : 'Home'}
               </Nav.Link>
-              <Nav.Link href='#' className='my-nav-link'>
-                <BsHeartFill color='#ffce00' /> Your Favorites
+
+              <Nav.Link as={Link} to='/favorites' className='my-nav-link'>
+                <BsHeartFill color='#ffce00' />{' '}
+                {isArabic ? 'المفضلة' : 'Your Favorites'}
               </Nav.Link>
-              <Nav.Link href='#' className='my-nav-link'>
-                <BsGiftFill color='#ffce00' /> Offers
+
+              <Nav.Link as={Link} to='/offers' className='my-nav-link'>
+                <BsGiftFill color='#ffce00' /> {isArabic ? 'العروض' : 'Offers'}
               </Nav.Link>
-              <Nav.Link href='#' className='my-nav-link'>
-                <BsClockFill color='#ffce00' /> Previous Order
+
+              <Nav.Link as={Link} to='/previous-orders' className='my-nav-link'>
+                <BsClockFill color='#ffce00' />{' '}
+                {isArabic ? 'الطلبات السابقة' : 'Previous Order'}
               </Nav.Link>
-              <Nav.Link href='#' className='my-nav-link'>
-                <BsChatDotsFill color='#ffce00' /> Feedback
+
+              <Nav.Link as={Link} to='/feedback' className='my-nav-link'>
+                <BsChatDotsFill color='#ffce00' />{' '}
+                {isArabic ? 'الملاحظات' : 'Feedback'}
               </Nav.Link>
-              <Nav.Link href='#' className='my-nav-link'>
-                <RiGlobalLine color='#ffce00' /> عربي
+
+              <Nav.Link
+                href='#'
+                className='my-nav-link'
+                onClick={handleLanguageChange}
+              >
+                <RiGlobalLine color='#ffce00' />
+                {isArabic ? 'EN' : 'عربي'}
               </Nav.Link>
-            </Nav>
+            </div>
           </Offcanvas.Body>
         </Offcanvas>
 
@@ -136,6 +157,13 @@ function NavigationBar () {
           </Offcanvas.Body>
         </Offcanvas>
       </Container>
+      <Button
+        variant='primary'
+        onClick={handleLanguageChange}
+        className='language_btn'
+      >
+        {isArabic ? 'EN' : 'عربي'}
+      </Button>
     </Navbar>
   )
 }

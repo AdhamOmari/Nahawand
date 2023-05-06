@@ -1,13 +1,35 @@
+* {
+
+    font: 1em 'Dosis', sans-serif;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+.offcanvas-body {
+    padding: 0px !important;
+}
+
 .offcanvaimg {
 
 
-    background-color: #664803 !important;
-
+    background-color: #505153 !important;
     color: #ffff;
-
     display: flex;
     flex-direction: row;
+    width: 105%;
+    margin-left: -20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
+    font: 1em 'Dosis', sans-serif;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    ;
+
+}
+
+.offcanvaimg p {
+    margin: 20px;
 
 }
 
@@ -33,4 +55,29 @@
     display: block;
 
     color: #ffff !important;
+}
+
+.language_btn {
+    position: fixed;
+    top: 110px;
+    right: 12px;
+    width: 80px;
+    opacity: 0.9;
+    background-color: rgb(22, 50, 162) !important
+}
+
+
+
+@media (max-width: 992px) {
+    .language_btn {
+        top: 107px;
+        left: 238px;
+    }
+}
+
+.nav_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
 }

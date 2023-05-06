@@ -1,0 +1,53 @@
+body .section-home {
+    border-bottom: 4px solid #5677c2;
+}
+
+.section-home {
+    overflow-x: auto;
+}
+
+.section-home {
+    overflow: hidden;
+    background-color: #ffffff;
+    width: 95%;
+    margin: 0 auto 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    -webkit-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+    -moz-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+    box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+}
+
+.section-home .heading-section {
+    position: relative;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+.section-home .heading-section .sa-title.popcat {
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+}
+
+.section-home .sa-title {
+    color: #212529;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+body .btn {
+    background-color: #1632a2;
+    color: white;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.clear {
+    clear: both;
+}
