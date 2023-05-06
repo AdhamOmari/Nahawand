@@ -41,7 +41,7 @@
 
 .title {
     position: relative;
-    bottom: 407px;
+    bottom: 295px;
     background-color: #413e3e;
 
     font-size: 24px;
@@ -51,7 +51,6 @@
 
 .description {
     position: relative;
-    bottom: 190px;
 
     font-size: 16px;
     color: #fff;
@@ -59,7 +58,7 @@
     width: 100%;
     padding: 20px;
     background-color: #413e3e;
-    bottom: 329px;
+    bottom: 208px;
 
 }
 
@@ -82,8 +81,35 @@
     -ms-transition: opacity .35s ease-in-out;
     -o-transition: opacity .35s ease-in-out;
     transition: opacity .35s ease-in-out;
+    border-bottom: 4px solid #5677c2;
+
 }
 
 .carousel.carousel-slider .control-arrow {
+    height: 100% !important;
+
+}
+
+.control-dots {
     display: none;
+
+}
+
+.carousel .carousel-slider {}
+
+.slide .selected {
+    overflow: hidden;
+
+}
+
+
+.carousel .slider-wrapper {
+    overflow: hidden;
+    /* margin: auto; */
+    width: 84%;
+    -webkit-transition: height .15s ease-in;
+    -moz-transition: height .15s ease-in;
+    -ms-transition: height .15s ease-in;
+    -o-transition: height .15s ease-in;
+    transition: height .15s ease-in;
 }

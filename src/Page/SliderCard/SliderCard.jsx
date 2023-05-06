@@ -27,7 +27,7 @@ const SliderCard = () => {
   return (
     <Carousel showThumbs={false} showStatus={false} autoPlay infiniteLoop>
       {images.map(image => (
-        <div key={image.id}>
+        <div key={image.id} className='width-slider'>
           <img src={image.src} alt='' />
           <div className='legend'>
             <div className='title'>{image.title}</div>
