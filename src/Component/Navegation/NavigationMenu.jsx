@@ -25,11 +25,11 @@ const NavigationMenu = () => {
           className='d-inline-block align rounded-circle'
           alt='Nahawand logo'
         />
-        <p>{language ? 'مرحبا' : 'Welcome'}</p>
+        <p>{language ? 'أهلاً ضيفنا العزيز ' : 'Welcome'}</p>
       </div>
 
       <div className='nav_wrap'>
-        <Nav.Link as={Link} to='/' exact className='my-nav-link'>
+        <Nav.Link as={Link} to='/' className='my-nav-link'>
           <BsHouseFill color='#ffce00' /> {language ? 'الرئيسية' : 'Home'}
         </Nav.Link>
 
@@ -47,7 +47,7 @@ const NavigationMenu = () => {
           {language ? 'الطلبات السابقة' : 'Previous Order'}
         </Nav.Link>
 
-        <Nav.Link as={Link} to='/feedback' className='my-nav-link'>
+        <Nav.Link as={Link} to='/Opinion' className='my-nav-link'>
           <BsChatDotsFill color='#ffce00' />{' '}
           {language ? 'الملاحظات' : 'Feedback'}
         </Nav.Link>

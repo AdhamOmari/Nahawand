@@ -86,7 +86,7 @@ function NavigationBar () {
             }}
           >
             <Offcanvas.Title style={{ color: '#ffffff' }}>
-              Main Menu
+              {language ? 'القائمة الرئيسية' : 'Main Menu'}
             </Offcanvas.Title>
           </Offcanvas.Header>
 

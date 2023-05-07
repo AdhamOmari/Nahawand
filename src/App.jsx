@@ -4,6 +4,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Spinner from './Component/Spinner/spinner'
 import NotFound from './Component/Notfound'
+import Opinion from './Page/opinion/Opinion'
 
 // Lazy-loaded components
 const NavigationBar = lazy(() => import('./Component/Navegation/NavigationBar'))
@@ -25,6 +26,7 @@ function App () {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/Menu' element={<CardCarousel />} />
+          <Route path='/Opinion' element={<Opinion />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>
