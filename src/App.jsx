@@ -1,40 +1,36 @@
-import './App.css'
-import Footer from './Component/Footer/Footer'
-import NavigationBar from './Component/Navegation/NavigationBar'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import CardLogo from './Page/CardLogo'
-import SliderCard from './Page/SliderCard/SliderCard'
-import Menus from './Page/Menus/Menus'
-import CardCarousel from './Page/Menus/CardCarousel'
-import Opinion from './Page/opinion/Opinion'
-import CardMenues from './Page/MenuesCard/CardMenues'
-import SubscriptionForm from './Page/Form/SubscriptionForm'
+import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Spinner from './Component/Spinner/spinner'
+import NotFound from './Component/Notfound'
+
+// Lazy-loaded components
+const NavigationBar = lazy(() => import('./Component/Navegation/NavigationBar'))
+const Footer = lazy(() => import('./Component/Footer/Footer'))
+const HomePage = lazy(() => import('./Page/Home/HomePage'))
+
+// Other lazy-loaded components
+const CardCarousel = lazy(() => import('./Page/Menus/CardCarousel'))
+
 function App () {
   return (
     <BrowserRouter>
       <header>
-        <NavigationBar />
+        <Suspense fallback={<Spinner />}>
+          <NavigationBar />
+        </Suspense>
       </header>
-
-      <main className='main_wrap'>
+      <Suspense fallback={<Spinner />}>
         <Routes>
-          <Route path='/' element={<CardLogo />} />
-          <Route path='/slider-card' element={<SliderCard />} />
-          <Route path='/menus' element={<Menus />} />
-          <Route path='/card-carousel' element={<CardCarousel />} />
-          <Route path='/opinion' element={<Opinion />} />
-          <Route path='/card-menues' element={<CardMenues />} />
-          <Route path='/subscription-form' element={<SubscriptionForm />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/Menu' element={<CardCarousel />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
-        {/* <CardLogo /> */}
-        <SliderCard />
-        <CardMenues />
-        <Opinion />
-        <SubscriptionForm />
-      </main>
-
-      <Footer />
+      </Suspense>
+      <Suspense fallback={<Spinner />}>
+        <Footer />
+      </Suspense>
     </BrowserRouter>
   )
 }

@@ -1,6 +1,8 @@
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './SliderCard.css'
+import { useNavigate } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 
 const SliderCard = () => {
   const images = [
@@ -27,18 +29,30 @@ const SliderCard = () => {
     }
   ]
 
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    console.log('Button clicked')
+    navigate('/Menu')
+  }
+
   return (
-    <Carousel showThumbs={false} showStatus={false} autoPlay infiniteLoop>
-      {images.map(image => (
-        <div key={image.id} className='width-slider'>
-          <img src={image.src} alt='' className='slider_image' />
-          <div className='legend'>
-            <h2 className='title'>{image.title}</h2>
-            <p className='description'>{image.description}</p>
+    <>
+      <Carousel showThumbs={false} showStatus={false} autoPlay infiniteLoop>
+        {images.map(image => (
+          <div key={image.id} className='width-slider'>
+            <img src={image.src} alt='' className='slider_image' />
+            <div className='legend'>
+              <h2 className='title'>{image.title}</h2>
+              <p className='description'>{image.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </Carousel>
+        ))}
+      </Carousel>
+      <button className='btn' onClick={() => handleClick()}>
+        More
+      </button>
+    </>
   )
 }
 
