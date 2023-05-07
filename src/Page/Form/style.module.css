@@ -55,10 +55,7 @@
     width: 100%;
 }
 
-.btn.disabled,
-.btn:disabled {
-    opacity: 0.6;
-}
+
 
 form {
     display: block;

@@ -23,9 +23,7 @@ const CardMenues = () => {
               src={Logo1}
               alt='Nahawand Logo 1'
             />
-            <span className={styles.title}>
-              {language ? 'الإفطار' : 'Breakfast'}
-            </span>
+            <p className={styles.title}>{language ? 'الإفطار' : 'Breakfast'}</p>
           </div>
           <div className={styles.titleContainer}>
             <Card.Img
@@ -34,9 +32,9 @@ const CardMenues = () => {
               src={Logo1}
               alt='Nahawand Logo 2'
             />
-            <span className={styles.title}>
+            <p className={styles.title}>
               {language ? 'الغداء والعشاء' : 'Lunch & Dinner'}
-            </span>
+            </p>
           </div>
         </div>
         <Card.Body></Card.Body>
