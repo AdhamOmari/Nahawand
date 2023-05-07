@@ -134,6 +134,10 @@
 
 .text-center {
     text-align: center !important;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .py-2 {

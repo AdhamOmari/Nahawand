@@ -11,10 +11,16 @@ import {
 function Footer () {
   const isArabic = useSelector(state => state.isArabic)
 
+  const whatsappText = isArabic
+    ? 'مرحبًا، أرغب في معرفة المزيد عن عناصر القائمة في المطعم 😃 🥩'
+    : 'Hello, I want to know more about the menu items in the restaurant 😃 🥩'
+
   return (
     <footer className={`bg-dark footer `}>
       <a
-        href='https://api.whatsapp.com/send?phone=962796087362&text=hello'
+        href={`https://api.whatsapp.com/send?phone=962796087362&text=${encodeURIComponent(
+          whatsappText
+        )}`}
         className='float'
         target='_blank'
         rel='noreferrer'
@@ -45,7 +51,9 @@ function Footer () {
           <Row>
             <Col xs={12} className='mb-0'>
               <p className='mb-0 text-center'>
-                © {new Date().getFullYear()} Your Company. All rights reserved.
+                © {new Date().getFullYear()}
+                {isArabic ? ' مطعم نهواند' : 'NAHAWAND Grill House'}.{' '}
+                {isArabic ? 'جميع الحقوق محفوظة' : 'All rights reserved.'}
               </p>
             </Col>
           </Row>
