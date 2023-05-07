@@ -22,6 +22,7 @@ import { RiGlobalLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { setLanguage } from '../../Redux/Language/LangugeAction'
+import SearchNav from './searchNav'
 
 function NavigationBar () {
   const [menuShow, setMenuShow] = useState(false)
@@ -161,6 +162,8 @@ function NavigationBar () {
                 <FaSearch />
               </Button>
             </Form>
+            <br />
+            <SearchNav />
           </Offcanvas.Body>
         </Offcanvas>
       </Container>
