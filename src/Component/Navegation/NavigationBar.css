@@ -82,7 +82,7 @@
 
 .rtl {
 
-    text-align: right;
+    text-align: right !important;
     padding: 15px;
 
 }
