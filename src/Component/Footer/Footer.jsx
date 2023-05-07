@@ -14,7 +14,7 @@ function Footer () {
   return (
     <footer className={`bg-dark footer `}>
       <a
-        href='https://api.whatsapp.com/send?phone=0796087362&text=hello'
+        href='https://api.whatsapp.com/send?phone=00962796087362&text=hello'
         className='float'
         target='_blank'
         rel='noreferrer'
