@@ -40,16 +40,16 @@
 
 .custom-carousel .legend {
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
+    top: 0;
     width: 100%;
     background-color: transparent;
     color: #fff;
     padding: 10px;
     font-size: 12px;
     text-align: center;
-    opacity: 0.9;
+    opacity: 1;
     border-bottom: 4px solid #5677c2;
 }
 
@@ -63,4 +63,71 @@
 
 .custom-carousel .slider-wrapper {
     overflow: hidden;
+}
+
+.carousel .slide .legend {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    left: 50%;
+    margin-left: -45%;
+    width: 90%;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.8;
+    -webkit-transition: opacity .35s ease-in-out;
+    -moz-transition: opacity .35s ease-in-out;
+    -ms-transition: opacity .35s ease-in-out;
+    -o-transition: opacity .35s ease-in-out;
+    transition: opacity .35s ease-in-out;
+    background-color: transparent;
+}
+
+.legend {
+    top: 0px;
+}
+
+.description {
+    position: relative;
+    top: 67px;
+    background-color: #413e3e;
+    padding: 10px;
+    color: #f5f5f5;
+}
+
+.title {
+    position: relative;
+    top: 17px;
+    background-color: #413e3e;
+    padding: 10px;
+    color: #f5f5f5;
+}
+
+.slider_image {
+    border-radius: 8%;
+    width: 100%;
+    max-width: 200%;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 767px) {
+    .custom-carousel .slide {
+        height: auto;
+        max-height: none;
+    }
+
+    .custom-carousel .carousel-caption {
+        font-size: 1.5rem;
+    }
+
+    .custom-carousel .title {
+        font-size: 18px;
+        padding: 8px;
+    }
 }

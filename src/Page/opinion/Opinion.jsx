@@ -54,7 +54,7 @@ const Opinion = () => {
                 <textarea
                   className='opinion-textarea'
                   placeholder={
-                    isArabic ? 'أدخل رأيك هنا...' : 'Enter your opinion here...'
+                    isArabic ? 'أدخل رأيك هنا...' : 'Enter your opinion here'
                   }
                   value={opinion}
                   onChange={handleOpinionChange}
