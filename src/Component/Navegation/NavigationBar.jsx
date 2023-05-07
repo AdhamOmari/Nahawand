@@ -9,6 +9,7 @@ import {
 } from 'react-bootstrap'
 import Logo from '../../../public/image-003.svg'
 import { FaSearch, FaBars, FaArrowLeft } from 'react-icons/fa'
+import { CgMenuLeftAlt } from 'react-icons/cg'
 import { useEffect, useState } from 'react'
 import './NavigationBar.css'
 
@@ -53,7 +54,7 @@ function NavigationBar () {
     >
       <Container fluid>
         <Button variant='' onClick={handleMenuShow}>
-          <FaBars style={{ color: '#ffffff' }} />
+          <CgMenuLeftAlt style={{ color: '#ffffff' }} size={30} />
         </Button>
 
         <Navbar.Brand
@@ -97,11 +98,11 @@ function NavigationBar () {
         <Form className='d-flex'>
           {window.location.pathname === '/' ? (
             <Button variant='' onClick={handleSearchShow} className='ms-3'>
-              <FaSearch style={{ color: '#ffffff' }} />
+              <FaSearch style={{ color: '#ffffff' }} size={25} />
             </Button>
           ) : (
             <Button variant='' onClick={handleArrowBackClick} className='ms-3'>
-              <FaArrowLeft style={{ color: '#ffffff' }} />
+              <FaArrowLeft style={{ color: '#ffffff' }} size={30} />
             </Button>
           )}
         </Form>
