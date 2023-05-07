@@ -187,3 +187,14 @@
         margin-bottom: 1.5rem;
     }
 }
+
+.rtl {
+    direction: ltr;
+    /* Additional RTL styles */
+}
+
+.ltr {
+    direction: rtl;
+
+    /* Additional LTR styles */
+}

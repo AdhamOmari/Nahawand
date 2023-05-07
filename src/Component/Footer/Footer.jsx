@@ -50,9 +50,9 @@ function Footer () {
         <Container>
           <Row>
             <Col xs={12} className='mb-0'>
-              <p className='mb-0 text-center'>
-                © {new Date().getFullYear()}
-                {isArabic ? ' مطعم نهواند' : 'NAHAWAND Grill House'}.{' '}
+              <p className={`mb-0 text-center ${isArabic ? 'rtl' : 'ltr'}`}>
+                © {new Date().getFullYear()}{' '}
+                {isArabic ? 'مطعم نهواند' : 'NAHAWAND Grill House'}.{' '}
                 {isArabic ? 'جميع الحقوق محفوظة' : 'All rights reserved.'}
               </p>
             </Col>
