@@ -36,8 +36,8 @@ function Footer () {
         </h5>
         <p className='text-uppercase'>
           {isArabic
-            ? 'متوسط السعرات الحرارية التي يتناولها الشخص في اليوم هو 2000'
-            : 'Average calorie intake per person in a day is 2000'}
+            ? 'متوسط السعرات الحرارية التي يتناولها الشخص في اليوم 2000'
+            : 'Average calorie intake per person in  day is 2000'}
         </p>
       </div>
       <div className='socialmediaicons'>
