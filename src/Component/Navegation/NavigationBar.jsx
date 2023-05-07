@@ -46,7 +46,7 @@ function NavigationBar () {
     <Navbar
       style={{ backgroundColor: '#1632a2' }}
       expand='lg'
-      className='mb-3  navs'
+      className='mb-3  navs rtl'
     >
       <Container fluid>
         <Button variant='' onClick={handleMenuShow}>

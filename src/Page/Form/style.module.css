@@ -157,3 +157,23 @@ form {
         padding-left: 15px;
     }
 }
+
+.sectionSubscribe {
+    direction: rtl;
+    /* ... other styles ... */
+}
+
+.sectionTitle {
+    direction: rtl;
+    /* ... other styles ... */
+}
+
+.textsub {
+    direction: rtl;
+    /* ... other styles ... */
+}
+
+.formControl {
+    direction: rtl;
+    /* ... other styles ... */
+}

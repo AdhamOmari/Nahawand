@@ -128,3 +128,37 @@ body {
         align-self: center;
     }
 }
+
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.opinion-card {
+    direction: rtl;
+    text-align: right;
+}
+
+.opinion-card-header {
+    text-align: center;
+}
+
+.opinion-card-title {
+    text-align: center;
+}
+
+.opinion-card-body {
+    text-align: right;
+}
+
+.opinion-textarea {
+    direction: rtl;
+    text-align: right;
+}
+
+.opinion-card-submit {
+    margin: 10px 0;
+    direction: ltr;
+    text-align: center;
+}

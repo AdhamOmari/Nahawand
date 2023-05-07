@@ -27,7 +27,7 @@ function App () {
           <Route path='/card-menues' element={<CardMenues />} />
           <Route path='/subscription-form' element={<SubscriptionForm />} />
         </Routes>
-
+        <CardLogo />
         <SliderCard />
         <CardMenues />
         <Opinion />

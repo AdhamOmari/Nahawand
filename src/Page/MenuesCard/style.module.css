@@ -6,6 +6,8 @@
     /* padding: 20px; */
     justify-content: center;
     align-items: center;
+    direction: rtl;
+
 }
 
 .card {
@@ -45,6 +47,7 @@
     position: absolute;
     left: 25px;
     top: 25px;
+    direction: rtl;
 
     font-weight: 600;
     text-align: center;

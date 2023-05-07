@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 .main_wrap {
-    width: 70%;
-    margin: 53px auto;
+    width: 96%;
+    margin: 90px auto;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -10,4 +10,19 @@
     font-family: 'Dosis', sans-serif;
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-family: 'Oswald', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .main_wrap {
+        width: 90%;
+        margin: 50px auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main_wrap {
+        width: 80%;
+        margin: 78px auto;
+        gap: 40px;
+    }
 }
