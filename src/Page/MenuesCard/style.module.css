@@ -109,19 +109,23 @@
     }
 
     .imgContainer {
-        max-width: 133px;
-
-        max-height: 150px;
+        max-width: 210px;
+        max-height: 180px;
         position: relative !important;
     }
 
     .cardContainer {
         height: 280px;
         bottom: 267px;
-        gap: 20px;
+        height: 589px;
+        flex-direction: column;
+
+
     }
 
-
+    .card {
+        width: 90%;
+    }
 
     .btn-more {
         left: 39%;
