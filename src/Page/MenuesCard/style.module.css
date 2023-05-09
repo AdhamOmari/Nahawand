@@ -1,4 +1,7 @@
 .cardContainer {
+
+    position: relative;
+    bottom: 130px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -17,6 +20,15 @@
     background-color: #ffffff;
     border-bottom: 4px solid #5677c2;
 
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    -webkit-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+    -moz-box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+    box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
+
 
 }
 
@@ -28,14 +40,24 @@
 
 }
 
-.titleContainer {}
+.menu_center {
+    position: absolute;
+    text-align: center;
+    z-index: 1000000;
+    top: 10px;
+    margin: 2px;
+    font-weight: 600;
+    font-size: 18px;
+
+
+}
 
 .imgContainer {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: row-reverse;
-    margin: 20px auto;
+    margin: 54px auto;
     width: 250px;
     height: 200px;
     border-radius: 20px;
@@ -95,6 +117,17 @@
 
     .cardContainer {
         height: 250px;
+        bottom: 267px;
+    }
+
+    .description {
+        top: 80px;
+        left: 30px;
+    }
+
+
+    .btn-more {
+        left: 39%;
     }
 }
 

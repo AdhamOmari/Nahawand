@@ -42,26 +42,28 @@ const SliderCard = () => {
 
   return (
     <>
-      <Carousel
-        showThumbs={false}
-        showStatus={false}
-        autoPlay
-        infiniteLoop
-        renderIndicator={renderDotIndicator}
-      >
-        {images.map(image => (
-          <div key={image.id} className='width-slider'>
-            <img src={image.src} alt='' className='slider_image' />
-            <div className='legend'>
-              <h2 className='title'>{image.title}</h2>
-              <p className='description'>{image.description}</p>
+      <div className='wrap_slider'>
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          autoPlay
+          infiniteLoop
+          renderIndicator={renderDotIndicator}
+        >
+          {images.map(image => (
+            <div key={image.id} className='width-slider'>
+              <img src={image.src} alt='' className='slider_image' />
+              <div className='legend'>
+                <h2 className='title'>{image.title}</h2>
+                <p className='description'>{image.description}</p>
+              </div>
             </div>
-            <button className='btn btn-more' onClick={() => handleClick()}>
-              More
-            </button>
-          </div>
-        ))}
-      </Carousel>
+          ))}
+        </Carousel>
+        <button className='btn btn-more' onClick={() => handleClick()}>
+          More
+        </button>
+      </div>
     </>
   )
 }

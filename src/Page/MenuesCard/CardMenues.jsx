@@ -17,6 +17,8 @@ const CardMenues = () => {
   return (
     <div className={styles.wrap_card}>
       <div className={`${styles.cardContainer} rtl`}>
+        <h2 className={styles.menu_center}>Menu</h2>
+
         <div className={styles.card}>
           <div className={styles.imgContainer}>
             <Card.Img

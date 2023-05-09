@@ -10,6 +10,7 @@
     font-family: 'Dosis', sans-serif;
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-family: 'Oswald', sans-serif;
+    font-family: 'Amiri'
 }
 
 @media screen and (max-width: 768px) {
@@ -25,4 +26,9 @@
         margin: 78px auto;
         gap: 40px;
     }
+}
+
+
+* {
+    border: 1px solid red;
 }

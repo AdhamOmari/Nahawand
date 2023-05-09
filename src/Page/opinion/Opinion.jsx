@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { FaComments } from 'react-icons/fa'
+import { FaComments, FaTimes } from 'react-icons/fa'
 import { BiAddToQueue } from 'react-icons/bi'
 import './style.css'
 
@@ -23,6 +23,11 @@ const Opinion = () => {
       opinion
     )}`
     window.location.href = emailLink
+  }
+
+  const handleCloseOpinion = () => {
+    setShowOpinionField(false)
+    setOpinion('')
   }
 
   return (
@@ -48,6 +53,12 @@ const Opinion = () => {
                 <h2 className='opinion-card-title'>
                   {isArabic ? 'أضف رأيك' : 'Add Your Opinion'}
                 </h2>
+                <button
+                  className='opinion-card-close'
+                  onClick={handleCloseOpinion}
+                >
+                  <FaTimes />
+                </button>
               </div>
               <div className='opinion-card-body'>
                 <textarea

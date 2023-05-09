@@ -110,6 +110,7 @@ form {
     .sectionSubscribe {
         width: 100%;
         padding: 10px;
+        bottom: 290px;
     }
 
     .col6 {
@@ -146,6 +147,7 @@ form {
 @media (min-width: 992px) {
     .sectionSubscribe {
         width: 100%;
+
     }
 
     .col6 {
