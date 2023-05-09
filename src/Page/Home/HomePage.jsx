@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import { Helmet } from 'react-helmet'
 import Spinner from '../../Component/Spinner/spinner'
+import StoreLocation from '../StoreLocation/StoreLocation'
 
 // Lazy-loaded components
 const SliderCard = lazy(() => import('../SliderCard/SliderCard'))
@@ -15,7 +16,7 @@ const NavigationBar = lazy(() =>
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Helmet>
         <title>Your Website Title</title>
         <meta name='description' content='Description of your website' />
@@ -35,9 +36,10 @@ const HomePage = () => {
           <CardMenues />
           <Opinion />
           <SubscriptionForm />
+          <StoreLocation />
         </Suspense>
       </main>
-    </div>
+    </>
   )
 }
 

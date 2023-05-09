@@ -116,14 +116,11 @@
     }
 
     .cardContainer {
-        height: 250px;
+        height: 280px;
         bottom: 267px;
+        gap: 20px;
     }
 
-    .description {
-        top: 80px;
-        left: 30px;
-    }
 
 
     .btn-more {
