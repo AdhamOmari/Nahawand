@@ -38,18 +38,7 @@ const SubscriptionForm = () => {
             </p>
             <div className={styles.mailSubscribe}>
               <form name='' className={styles.form}>
-                <div className={styles.row}>
-                  <div className={styles.col12}>
-                    <input
-                      className={styles.formControl}
-                      name='name'
-                      placeholder={namePlaceholder}
-                      type='text'
-                      value={name}
-                      onChange={e => setName(e.target.value)}
-                    />
-                  </div>
-                </div>
+                <div className={styles.row}></div>
                 <div className={styles.row}>
                   <div className={`${styles.col6} ${styles.colMd6}`}>
                     <input
