@@ -1,13 +1,5 @@
 /* General Styles */
 
-body {
-    font-family: 'Dosis', sans-serif;
-    font-family: 'Noto Kufi Arabic', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-}
 
 .container {
     width: 95%;
@@ -136,6 +128,7 @@ body {
 .rtl {
     direction: rtl;
     text-align: left;
+    padding: 0px !important;
 }
 
 .opinion-card {

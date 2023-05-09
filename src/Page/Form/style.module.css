@@ -1,7 +1,7 @@
 .sectionSubscribe {
     direction: rtl;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     position: relative;
     padding: 20px 20px;
     overflow: hidden;
@@ -145,7 +145,7 @@ form {
 /* For screens larger than 992px */
 @media (min-width: 992px) {
     .sectionSubscribe {
-        width: 80%;
+        width: 100%;
     }
 
     .col6 {

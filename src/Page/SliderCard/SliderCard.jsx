@@ -1,8 +1,8 @@
+import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './SliderCard.css'
 import { useNavigate } from 'react-router-dom'
-import { Router } from 'react-router-dom'
 
 const SliderCard = () => {
   const images = [
@@ -36,9 +36,19 @@ const SliderCard = () => {
     navigate('/Menu')
   }
 
+  const renderDotIndicator = (onClickHandler, isSelected) => {
+    return null // Render null to hide the dot indicators
+  }
+
   return (
     <>
-      <Carousel showThumbs={false} showStatus={false} autoPlay infiniteLoop>
+      <Carousel
+        showThumbs={false}
+        showStatus={false}
+        autoPlay
+        infiniteLoop
+        renderIndicator={renderDotIndicator}
+      >
         {images.map(image => (
           <div key={image.id} className='width-slider'>
             <img src={image.src} alt='' className='slider_image' />
@@ -46,12 +56,12 @@ const SliderCard = () => {
               <h2 className='title'>{image.title}</h2>
               <p className='description'>{image.description}</p>
             </div>
+            <button className='btn btn-more' onClick={() => handleClick()}>
+              More
+            </button>
           </div>
         ))}
       </Carousel>
-      <button className='btn' onClick={() => handleClick()}>
-        More
-      </button>
     </>
   )
 }

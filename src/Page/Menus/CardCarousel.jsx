@@ -7,9 +7,12 @@ const CardCarouselContainer = styled.div`
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  width: 100%;
-  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  width: 60%;
+  padding: 30px;
   border-radius: 10px;
+  margin: 0 auto;
 
   box-shadow: 0px 1px 9px 0px rgba(50, 50, 50, 0.13);
 `

@@ -27,7 +27,6 @@ const Opinion = () => {
 
   return (
     <div className='rtl'>
-      {' '}
       <div className='section-home home-news ng-scope'>
         <div className='heading-section'>
           <div className='sa-title popcat ng-binding '>
