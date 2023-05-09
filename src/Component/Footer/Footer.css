@@ -124,6 +124,17 @@
 
     .text-center {
         margin-left: -8px;
+        line-height: 1.5em;
+        /* Sets line height to 1.5 times text size */
+        height: 3em;
+        /* Sets the div height to 2x line-height (3 times text size) */
+        width: 180px;
+        /* Use whatever width you want */
+        white-space: normal;
+        /* Wrap lines of text */
+        overflow: hidden;
+        /* Hide text that goes beyond the boundaries of the div */
+
 
     }
 }

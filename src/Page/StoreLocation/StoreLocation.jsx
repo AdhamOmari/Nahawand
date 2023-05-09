@@ -1,9 +1,15 @@
 import React from 'react'
 import styles from './style.module.css'
+import { useSelector } from 'react-redux'
 
 const StoreLocation = () => {
+  const language = useSelector(state => state.isArabic)
+
   return (
-    <div className={styles['store-location']} id='Location'>
+    <div className={`${styles.card} ${styles['store-location']}`} id='Location'>
+      <h2 className={styles['map-title']}>
+        {language ? ' موقعنا على الخرائط' : 'Store Location'}
+      </h2>
       <div className={styles['map-container']}>
         <iframe
           title='Store Map'

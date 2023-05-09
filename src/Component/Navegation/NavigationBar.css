@@ -6,12 +6,16 @@
     text-align: right;
 }
 
+.ltr {
+    text-align: left;
+}
+
 .offcanvaimg {
     background-color: #5677c2 !important;
     color: #fff;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 103%;
     flex-wrap: wrap;
     justify-content: space-around;
     font-family: 'Amiri', sans-serif;
@@ -66,6 +70,10 @@
     .language_btn {
         top: 7rem;
     }
+
+    .offcanvas-start {
+        width: 197px !important;
+    }
 }
 
 .nav_wrap {
@@ -75,14 +83,7 @@
     margin: 20px auto;
 }
 
-.ltr {
-    text-align: left;
-}
-
-
-
-/* Add this CSS to your existing styles */
-
+/* Scrollbar Styling */
 /* For Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 8px;
@@ -104,7 +105,6 @@
 /* For Firefox */
 /* Please note that scrollbar styling in Firefox is limited to changing the color */
 /* You can adjust the colors to match your design */
-
 /* Track */
 html {
     scrollbar-width: thin;
@@ -118,3 +118,11 @@ html:hover {
 
 /* For Internet Explorer and Microsoft Edge */
 /* Scrollbar styling is not supported in these browsers */
+
+.navigation-menu {
+    width: 97%;
+
+
+    /* Replace with your desired width */
+    /* Add any other necessary styles */
+}
