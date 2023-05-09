@@ -17,15 +17,19 @@ const NavigationMenu = () => {
 
   return (
     <div>
-      <div className='offcanvaimg'>
+      <div className='offcanvaimg rtl'>
         <img
           src={Logo}
-          width={70}
-          height={70}
+          width={90}
+          height={90}
           className='d-inline-block align rounded-circle'
           alt='Nahawand logo'
         />
-        <p>{language ? 'أهلاً ضيفنا العزيز ' : 'Welcome'}</p>
+        <h2>
+          {language
+            ? 'نهاوند بيت المشاوي (الأعلى تقييماً)'
+            : ' Nahawand  (Highest Rated)'}
+        </h2>
       </div>
 
       <div className='nav_wrap'>

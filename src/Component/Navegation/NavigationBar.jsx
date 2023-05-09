@@ -80,7 +80,7 @@ function NavigationBar () {
             closeVariant='white'
             closeButton
             style={{
-              backgroundColor: '#0000ff',
+              backgroundColor: '#1632a2',
               padding: '1.2rem',
               textAlign: 'center'
             }}

@@ -1,53 +1,51 @@
 .offcanvas-body {
-    padding: 0px !important;
+    padding: 0 !important;
+}
+
+.rtl {
+    text-align: right;
 }
 
 .offcanvaimg {
-
-
-    background-color: #505153 !important;
-    color: #ffff;
+    background-color: #5677c2 !important;
+    color: #fff;
     display: flex;
     flex-direction: row;
-    width: 105%;
-    margin-left: -20px;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
-
-    font: 1em 'Dosis', sans-serif;
-    font-family: 'Noto Kufi Arabic', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    ;
-
+    font-family: 'Amiri', sans-serif;
+    padding: 20px;
 }
 
-.offcanvaimg p {
-    margin: 20px;
-
+.offcanvaimg h2 {
+    padding-top: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: pre-line;
+    word-wrap: break-word;
+    width: 238px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    max-width: 300px;
+    text-align: center;
 }
 
 .offcanvaimg img {
-    position: relative;
     margin: 15px 10px 15px 20px;
-    left: 0px;
-    top: 0px
 }
 
 .offcanvaimg p {
-    padding: 20px 20px 0px 0px;
-
+    padding: 20px 20px 0;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff;
 }
-
-
 
 .my-nav-link {
     padding: 10px 20px;
     font-size: 1.1em;
     display: block;
-
-    color: #ffff !important;
+    color: #fff !important;
 }
 
 .language_btn {
@@ -56,20 +54,13 @@
     right: 12px;
     width: 80px;
     opacity: 0.9;
-    background-color: rgb(22, 50, 162) !important;
-    direction: rtl;
-    /* Added RTL direction */
-
+    background-color: #1632a2 !important;
+    direction: ltr;
 }
-
-
 
 @media (max-width: 992px) {
     .language_btn {
-
         top: 7rem;
-
-
     }
 }
 
@@ -80,14 +71,46 @@
     margin: 20px auto;
 }
 
-.rtl {
-
-    text-align: right !important;
-    padding: 15px;
-
-}
-
 .ltr {
-    padding: 15px;
     text-align: left;
 }
+
+
+
+/* Add this CSS to your existing styles */
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* For Firefox */
+/* Please note that scrollbar styling in Firefox is limited to changing the color */
+/* You can adjust the colors to match your design */
+
+/* Track */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #f1f1f1 #888;
+}
+
+/* Thumb */
+html:hover {
+    scrollbar-color: #f1f1f1 #555;
+}
+
+/* For Internet Explorer and Microsoft Edge */
+/* Scrollbar styling is not supported in these browsers */
