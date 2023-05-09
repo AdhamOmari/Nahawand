@@ -31,11 +31,7 @@ const SubscriptionForm = () => {
             <div className={styles.sectionTitle}>
               {language === 'ar' ? 'اشترك' : 'SUBSCRIBE'}
             </div>
-            <p className={styles.textsub}>
-              {language === 'ar'
-                ? 'احصل على عروض ومعلومات الأحداث كل شهر'
-                : 'Get offers and events information every month'}
-            </p>
+
             <div className={styles.mailSubscribe}>
               <form name='' className={styles.form}>
                 <div className={styles.row}></div>

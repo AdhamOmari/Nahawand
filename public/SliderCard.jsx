@@ -2,30 +2,30 @@ import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './SliderCard.css'
-import image from '../../../public/image.jpg'
-import image2 from '../../../public/image2.jpg'
-import image3 from '../../../public/image3.jpg'
+import { image } from '../../assets/image.jpg'
+import { image2 } from '../../assets/image2.jpg'
+import { image3 } from '../../assets/image3.jpg'
 import { useNavigate } from 'react-router-dom'
 
 const SliderCard = () => {
   const images = [
     {
       id: 1,
-      src: image,
+      src: { image1 },
       title: 'Title 1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend dolor ac aliquet lacinia. Nullam eu augue velit. Aenean dictum eleifend metus, id congue est volutpat id.'
     },
     {
       id: 2,
-      src: image2,
+      src: { image2 },
       title: 'Title 2',
       description:
         'Vestibulum lobortis ligula ut mauris fringilla, ac feugiat nulla tristique. Maecenas ultricies ullamcorper ante ut dapibus.'
     },
     {
       id: 3,
-      src: image3,
+      src: { image3 },
       title: 'Title 3',
       description:
         'Proin finibus est quis urna dignissim, eu placerat arcu aliquet. Nulla ultrices facilisis massa, id scelerisque nisi sagittis at.'

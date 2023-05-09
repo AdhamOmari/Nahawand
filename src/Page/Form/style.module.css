@@ -9,7 +9,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-bottom: 4px solid #5677c2;
-    padding: 60px;
+    padding: 70px;
 }
 
 .sectionSubscribe .subcontainer {
@@ -22,7 +22,7 @@
     text-align: center;
     font-size: 18px;
     margin-bottom: 5px;
-    color: #1632a2;
+    color: #000;
     direction: rtl;
 }
 
