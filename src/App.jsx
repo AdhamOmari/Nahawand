@@ -4,6 +4,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Spinner from './Component/Spinner/spinner'
 import NotFound from './Component/Notfound'
+import StoreLocation from './Page/StoreLocation/StoreLocation'
 import Opinion from './Page/opinion/Opinion'
 
 // Lazy-loaded components
@@ -27,6 +28,7 @@ function App () {
           <Route path='/' element={<HomePage />} />
           <Route path='/Menu' element={<CardCarousel />} />
           <Route path='/Opinion' element={<Opinion />} />
+          <Route path='/Location' element={<StoreLocation />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>

@@ -3,16 +3,16 @@ import {
   BsHouseFill,
   BsHeartFill,
   BsGiftFill,
-  BsClockFill,
   BsChatDotsFill
 } from 'react-icons/bs'
+import { ImLocation } from 'react-icons/im'
 import { Nav } from 'react-bootstrap'
 import { RiGlobalLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import Logo from '../../../public/image-003.svg'
 import { useSelector } from 'react-redux'
 
-const NavigationMenu = () => {
+const NavigationMenu = ({ handleLanguageChange }) => {
   const language = useSelector(state => state.isArabic)
 
   return (
@@ -27,8 +27,8 @@ const NavigationMenu = () => {
         />
         <h2>
           {language
-            ? 'نهاوند بيت المشاوي (الأعلى تقييماً)'
-            : ' Nahawand  (Highest Rated)'}
+            ? 'نهاوند بيت المشاوي الأعلى تقييماً'
+            : ' Nahawand Highest Rated'}
         </h2>
       </div>
 
@@ -46,9 +46,14 @@ const NavigationMenu = () => {
           <BsGiftFill color='#ffce00' /> {language ? 'العروض' : 'Offers'}
         </Nav.Link>
 
-        <Nav.Link as={Link} to='/previous-orders' className='my-nav-link'>
-          <BsClockFill color='#ffce00' />{' '}
-          {language ? 'الطلبات السابقة' : 'Previous Order'}
+        <Nav.Link
+          as={Link}
+          to='/Location'
+          className='my-nav-link'
+          href='#Opinion'
+        >
+          <ImLocation color='#ffce00' />
+          {language ? 'الموقع' : 'Location'}
         </Nav.Link>
 
         <Nav.Link as={Link} to='/Opinion' className='my-nav-link'>
@@ -59,7 +64,7 @@ const NavigationMenu = () => {
         <Nav.Link
           href='#'
           className='my-nav-link'
-          // onClick={handleLanguageChange}
+          onClick={handleLanguageChange}
         >
           <RiGlobalLine color='#ffce00' />
           {language ? 'EN' : 'عربي'}

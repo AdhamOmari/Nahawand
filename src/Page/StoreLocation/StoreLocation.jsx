@@ -3,7 +3,7 @@ import styles from './style.module.css'
 
 const StoreLocation = () => {
   return (
-    <div className={styles['store-location']}>
+    <div className={styles['store-location']} id='Location'>
       <div className={styles['map-container']}>
         <iframe
           title='Store Map'

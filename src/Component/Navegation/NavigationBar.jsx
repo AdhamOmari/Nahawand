@@ -91,7 +91,7 @@ function NavigationBar () {
           </Offcanvas.Header>
 
           <Offcanvas.Body style={{ backgroundColor: '#495057' }}>
-            <NavigationMenu />
+            <NavigationMenu handleLanguageChange={handleLanguageChange} />
           </Offcanvas.Body>
         </Offcanvas>
 
