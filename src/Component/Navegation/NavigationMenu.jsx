@@ -12,10 +12,11 @@ import { Link } from 'react-router-dom'
 import Logo from '../../../public/image-003.svg'
 import { useSelector } from 'react-redux'
 
+import './NavigationBar.css' // Import your CSS file
+
 const NavigationMenu = ({ handleLanguageChange }) => {
   const language = useSelector(state => state.isArabic)
   const textDirection = language ? 'rtl' : 'ltr'
-  const iconDirection = language ? 'right' : 'left'
 
   return (
     <div className={`navigation-menu ${textDirection}`}>
@@ -35,12 +36,9 @@ const NavigationMenu = ({ handleLanguageChange }) => {
       </div>
 
       <div className='nav_wrap'>
-        <Nav.Link as={Link} to='/' className={`my-nav-link ${iconDirection}`}>
+        <Nav.Link as={Link} to='/' className={`my-nav-link ${textDirection}`}>
+          <span className='link-text'>{language ? 'الرئيسية' : 'Home'}</span>
           <BsHouseFill color='#ffce00' className='icon' />
-          <h3 className={`my-nav-link ${iconDirection}`}>
-            {' '}
-            {language ? 'الرئيسية' : 'Home'}
-          </h3>
         </Nav.Link>
 
         <Nav.Link
@@ -48,8 +46,10 @@ const NavigationMenu = ({ handleLanguageChange }) => {
           to='/favorites'
           className={`my-nav-link ${textDirection}`}
         >
-          <BsHeartFill color='#ffce00' className='icon' />{' '}
-          {language ? 'المفضلة' : 'Your Favorites'}
+          <span className='link-text'>
+            {language ? 'المفضلة' : 'Your Favorites'}
+          </span>
+          <BsHeartFill color='#ffce00' className='icon' />
         </Nav.Link>
 
         <Nav.Link
@@ -57,8 +57,8 @@ const NavigationMenu = ({ handleLanguageChange }) => {
           to='/offers'
           className={`my-nav-link ${textDirection}`}
         >
-          <BsGiftFill color='#ffce00' className='icon' />{' '}
-          {language ? 'العروض' : 'Offers'}
+          <span className='link-text'>{language ? 'العروض' : 'Offers'}</span>
+          <BsGiftFill color='#ffce00' className='icon' />
         </Nav.Link>
 
         <Nav.Link
@@ -66,8 +66,8 @@ const NavigationMenu = ({ handleLanguageChange }) => {
           to='/Location'
           className={`my-nav-link ${textDirection}`}
         >
-          <ImLocation color='#ffce00' className='icon' />{' '}
-          {language ? 'الموقع' : 'Location'}
+          <span className='link-text'>{language ? 'الموقع' : 'Location'}</span>
+          <ImLocation color='#ffce00' className='icon' />
         </Nav.Link>
 
         <Nav.Link
@@ -75,8 +75,10 @@ const NavigationMenu = ({ handleLanguageChange }) => {
           to='/Opinion'
           className={`my-nav-link ${textDirection}`}
         >
-          <BsChatDotsFill color='#ffce00' className='icon' />{' '}
-          {language ? 'الملاحظات' : 'Feedback'}
+          <span className='link-text'>
+            {language ? 'الملاحظات' : 'Feedback'}
+          </span>
+          <BsChatDotsFill color='#ffce00' className='icon' />
         </Nav.Link>
 
         <Nav.Link
@@ -84,8 +86,8 @@ const NavigationMenu = ({ handleLanguageChange }) => {
           className={`my-nav-link ${textDirection}`}
           onClick={handleLanguageChange}
         >
-          <RiGlobalLine color='#ffce00' className='icon' />{' '}
-          {language ? 'EN' : 'عربي'}
+          <span className='link-text'>{language ? 'EN' : 'عربي'}</span>
+          <RiGlobalLine color='#ffce00' className='icon' />
         </Nav.Link>
       </div>
     </div>

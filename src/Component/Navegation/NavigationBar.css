@@ -11,20 +11,13 @@
 }
 
 
-.right {
-    text-align: left;
-}
-
-.left {
-    text-align: right;
-}
 
 .offcanvaimg {
-    background-color: #5677c2 !important;
+    background-color: rgb(55 61 66) !important;
     color: #fff;
     display: flex;
     flex-direction: row;
-    width: 101%;
+    width: 391px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-family: 'Amiri', sans-serif;
@@ -81,7 +74,11 @@
     }
 
     .offcanvas-start {
-        width: 197px !important;
+        width: 50% !important;
+    }
+
+    .offcanvaimg {
+        width: 103%;
     }
 }
 
