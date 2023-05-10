@@ -35,8 +35,9 @@ const HomePage = () => {
           <SliderCard />
           <CardMenues />
           <Opinion />
-          <SubscriptionForm />
           <StoreLocation />
+
+          <SubscriptionForm />
         </Suspense>
       </main>
     </>

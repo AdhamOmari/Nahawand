@@ -10,16 +10,25 @@
     text-align: left;
 }
 
+
+.right {
+    text-align: left;
+}
+
+.left {
+    text-align: right;
+}
+
 .offcanvaimg {
     background-color: #5677c2 !important;
     color: #fff;
     display: flex;
     flex-direction: row;
-    width: 103%;
+    width: 101%;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-family: 'Amiri', sans-serif;
-    padding: 20px;
+    padding: -7px;
 }
 
 .offcanvaimg h2 {

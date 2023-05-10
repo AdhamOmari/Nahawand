@@ -72,4 +72,11 @@
     .map-container {
         height: 300px;
     }
+
+
+
+    .card {
+        top: -175px;
+        position: relative;
+    }
 }

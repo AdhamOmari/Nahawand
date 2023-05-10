@@ -15,10 +15,11 @@ import { useSelector } from 'react-redux'
 const NavigationMenu = ({ handleLanguageChange }) => {
   const language = useSelector(state => state.isArabic)
   const textDirection = language ? 'rtl' : 'ltr'
+  const iconDirection = language ? 'right' : 'left'
 
   return (
     <div className={`navigation-menu ${textDirection}`}>
-      <div className={`offcanvaimg ${textDirection}`}>
+      <div className={`offcanvaimg `}>
         <img
           src={Logo}
           width={90}
@@ -34,9 +35,12 @@ const NavigationMenu = ({ handleLanguageChange }) => {
       </div>
 
       <div className='nav_wrap'>
-        <Nav.Link as={Link} to='/' className={`my-nav-link ${textDirection}`}>
-          <BsHouseFill color='#ffce00' className='icon' />{' '}
-          {language ? 'الرئيسية' : 'Home'}
+        <Nav.Link as={Link} to='/' className={`my-nav-link ${iconDirection}`}>
+          <BsHouseFill color='#ffce00' className='icon' />
+          <h3 className={`my-nav-link ${iconDirection}`}>
+            {' '}
+            {language ? 'الرئيسية' : 'Home'}
+          </h3>
         </Nav.Link>
 
         <Nav.Link
